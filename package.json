@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/oyve/sun/issues"
   },
-  "homepage": "https://github.com/oyve/sun#readme"
+  "homepage": "https://github.com/oyve/sun#readme",
+  "devDependencies": {
+    "mocha": "^8.2.1"
+  }
 }
