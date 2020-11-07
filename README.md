@@ -1,4 +1,4 @@
-![Mocha](https://travis-ci.com/oyve/sun.svg?branch=main)
+![Node.js CI](https://github.com/oyve/sun/workflows/Node.js%20CI/badge.svg?branch=main)
 # sun
 A Javascript library to calculate sun events.
 
