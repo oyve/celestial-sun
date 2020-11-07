@@ -1,3 +1,4 @@
+![Mocha](https://travis-ci.com/oyve/sun.svg?branch=main)
 # sun
 A Javascript library to calculate sun events.
 
