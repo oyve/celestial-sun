@@ -1,6 +1,6 @@
 {
   "name": "celestial-sun",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Sun events such as sunrise and sunset",
   "main": "sun.js",
   "directories": {
