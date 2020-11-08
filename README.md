@@ -14,7 +14,7 @@ View the test file for a complete example.
 ```
 const sun = require('./sun');
 
-let sunEvents = sun.calculate(year, month, day, latitude, longitude, timezoneOffset);
+let sunEvents = sun.calculate(latitude, longitude, year, month, day, timezoneOffset);
 
 let sunrise = sunEvents.sunrise;
 let sunset = sunEvents.sunset;
