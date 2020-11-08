@@ -4,15 +4,15 @@ const J2000 = 2451545;
 
 /**
  * 
+ * @param {number} latitude Latitude in decimal degrees, i.e. 15.870039
+ * @param {number} longitude Latitude in decimal degrees, i.e. -61.586608
  * @param {number} year Year
  * @param {number} month Month
  * @param {number} day Day
- * @param {number} latitude Latitude in decimal degrees, i.e. 15.870039
- * @param {number} longitude Latitude in decimal degrees, i.e. -61.586608
  * @param {number} timezone Timezone difference from UTC time, i.e. -4 or +4
  * @returns {Array.<Object>} Sun events as json
  */
-function calculate(year, month, day, latitude, longitude, timezone) {
+function calculate(latitude, longitude, year, month, day, timezone) {
     let lat = latitude;
     let lng = longitude;
     let jDate = gregorianToJulian(year, month, day, 12, 0, 0, timezone); // D

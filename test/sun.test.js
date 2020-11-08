@@ -26,7 +26,7 @@ describe("Sun - Integration Tests", function () {
                 tz: tz
             };
             //act
-            const actual = sun.calculate(year, month, day, lat, lng, tz).sunrise;
+            const actual = sun.calculate(lat, lng, year, month, day, tz).sunrise;
             //assert
             assert.deepStrictEqual(actual, expected);
         });
@@ -45,7 +45,7 @@ describe("Sun - Integration Tests", function () {
                 tz: tz
             };
             //act
-            const actual = sun.calculate(year, month, day, lat, lng, -4).sunset;
+            const actual = sun.calculate(lat, lng, year, month, day, -4).sunset;
             //assert
             assert.deepStrictEqual(actual, expected);
         });
@@ -64,7 +64,7 @@ describe("Sun - Integration Tests", function () {
                 tz: tz
             };
             //act
-            const actual = sun.calculate(year, month, day, lat, lng, -4).solarnoon;
+            const actual = sun.calculate(lat, lng, year, month, day, -4).solarnoon;
             //assert
             assert.deepStrictEqual(actual, expected);
         });
