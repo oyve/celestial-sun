@@ -1,5 +1,5 @@
-![Node.js CI](https://github.com/oyve/sun/workflows/Node.js%20CI/badge.svg?branch=main)
-# sun
+![Node.js CI](https://github.com/oyve/celestial-sun/workflows/Node.js%20CI/badge.svg?branch=main)
+# celestial-sun
 A Javascript library to calculate sun events.
 
 ## Currently supported:
