@@ -2,6 +2,8 @@
 # celestial-sun
 A Javascript library to calculate sun events.
 
+To avoid JS Date gymnastics, date and time I/O are treated numbers-only.
+
 ## Currently supported:
 
 * Sunrise
@@ -22,8 +24,7 @@ let solarnoon = sunEvents.solarnoon;
 ```
 
 ## Contribute
-If you want to contribute please create a Pull Request with code+test
+If you'd like to contribute please create a Pull Request including test code.
 
 ### Disclaimer:
-* To avoid Javascript Date gymnastics, date and time I/O are treated numbers-only
 * This code is ported to JS from C# Fiddle 'SolarCalc NOAA' https://dotnetfiddle.net/N3j5th by Erik Murphy
