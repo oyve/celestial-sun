@@ -7,7 +7,7 @@ const J2000 = 2451545;
  * @param {number} latitude Latitude in decimal degrees, i.e. 15.870039
  * @param {number} longitude Latitude in decimal degrees, i.e. -61.586608
  * @param {number} year Year
- * @param {number} month Month
+ * @param {number} month Month [1-12]
  * @param {number} day Day
  * @param {number} timezone Timezone difference from UTC time, i.e. -4 or +4
  * @returns {Array.<Object>} Sun events as json
