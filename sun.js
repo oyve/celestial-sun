@@ -9,13 +9,13 @@ const J2000 = 2451545;
  * @param {number} year Year
  * @param {number} month Month [1-12]
  * @param {number} day Day
- * @param {number} timezone Timezone difference from UTC time, i.e. -4 or +4
+ * @param {number} utcOffset Timezone difference from UTC time, i.e. -4 or +4 hours
  * @returns {Array.<Object>} Sun events as json
  */
-function calculate(latitude, longitude, year, month, day, timezone) {
+function calculate(latitude, longitude, year, month, day, utcOffset) {
     let lat = latitude;
     let lng = longitude;
-    let jDate = gregorianToJulian(year, month, day, 12, 0, 0, timezone); // D
+    let jDate = gregorianToJulian(year, month, day, 12, 0, 0, utcOffset); // D
     let t = julianCentury(jDate); // G
     let ml = geomMeanLongitudeSun(t); // I - deg
     let ma = geomMeanAnomalySun(t); // J - deg
@@ -28,12 +28,12 @@ function calculate(latitude, longitude, year, month, day, timezone) {
     let d = declinationSun(oc, al); // T - deg
     let eot = equationOfTime(oc, ml, eo, ma); // V - minutes
     let ha = hourAngleSunrise(lat, d); // W - Deg
-    let sn = solarNoon(lng, eot, timezone); // X - LST
+    let sn = solarNoon(lng, eot, utcOffset); // X - LST
     let sr = sunrise(sn, ha); // Y - LST
     let ss = sunset(sn, ha); // Z - LST
-    let sunriseOffset = toDate(year, month, day, sr, timezone);
-    let sunsetOffset = toDate(year, month, day, ss, timezone);
-    let solarNoonOffset = toDate(year, month, day, sn, timezone);
+    let sunriseOffset = toDate(year, month, day, sr, utcOffset);
+    let sunsetOffset = toDate(year, month, day, ss, utcOffset);
+    let solarNoonOffset = toDate(year, month, day, sn, utcOffset);
 
     return {
         sunrise: sunriseOffset,
@@ -68,7 +68,8 @@ function toDate(year, month, day, time, tz) {
         hours: hours,
         minutes: minutes,
         seconds: seconds,
-        tz: tz
+        tz: tz,
+        LocalISOString: new Date(year, month, day, hours, minutes, seconds).toISOString()
     }
 }
 
