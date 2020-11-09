@@ -42,7 +42,7 @@ function calculate(latitude, longitude, year, month, day, utcOffset) {
     };
 }
 
-function gregorianToJulian(year, month, day, hour, minute, second, timeZoneOffsetHours) {
+function gregorianToJulian(year, month, day, hour, minute, second, utcOffset) {
     if (month <= 2) {
         year -= 1;
         month += 12;
@@ -53,7 +53,7 @@ function gregorianToJulian(year, month, day, hour, minute, second, timeZoneOffse
     let jDay = Math.floor(365.25 * (year + 4716)) + Math.floor(30.6001 * (month + 1)) + day + B - 1524.5;
     let jTime = ((hour * (60 * 60)) + (minute * 60) + second) / SecondsInDay;
 
-    return jDay + jTime - timeZoneOffsetHours / 24;
+    return jDay + jTime - utcOffset / 24;
 }
 
 function toDate(year, month, day, time, tz) {
