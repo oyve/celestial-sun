@@ -22,7 +22,8 @@ let sunrise = sunEvents.sunrise;
 let sunset = sunEvents.sunset;
 let solarnoon = sunEvents.solarnoon;
 
-//example use with local Date time (the computer is in the same timezone as the input & calculation)
+//example use with local Date time:
+
 console.log(new Date(sunrise.year, sunrise.month, sunrise.day, sunrise.hour, sunrise.minutes, sunrise.seconds));
 console.log(sunrise.ISOString);
 ```
