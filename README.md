@@ -10,11 +10,14 @@ To avoid JS Date gymnastics, date and time I/O are treated numbers-only.
 * Sunset
 * Solar noon
 
-## Use
+## Install / Use
 View the test file for a complete example.
+```
+https://www.npmjs.com/package/celestial-sun
+```
 
 ```
-const sun = require('./sun');
+const sun = require('./celestial-sun');
 
 let sunEvents = sun.calculate(latitude, longitude, year, month, day, utcOffset);
 
