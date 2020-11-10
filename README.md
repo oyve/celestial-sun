@@ -25,9 +25,11 @@ let sunrise = sunEvents.sunrise;
 let sunset = sunEvents.sunset;
 let solarnoon = sunEvents.solarnoon;
 
-//example use with local Date time (Date will only be correct if you are in the same timezone as latitude/longtitude)
+//example use with local Date
 
 console.log(new Date(sunrise.year, sunrise.month, sunrise.day, sunrise.hour, sunrise.minutes, sunrise.seconds));
+
+//Using JavaScript Date object, date appear 'correct' only for systems in the specified latitude/longtitude.
 ```
 
 ## Contribute
