@@ -26,5 +26,8 @@
   "homepage": "https://github.com/oyve/celestial-sun#readme",
   "devDependencies": {
     "mocha": "^8.2.1"
-  }
+  },
+  "files": [
+    "sun.min.js"
+  ]
 }
