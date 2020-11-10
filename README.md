@@ -22,10 +22,9 @@ let sunrise = sunEvents.sunrise;
 let sunset = sunEvents.sunset;
 let solarnoon = sunEvents.solarnoon;
 
-//example use with local Date time:
+//example use with local Date time (Date will only be correct if you are in the same timezone as latitude/longtitude)
 
 console.log(new Date(sunrise.year, sunrise.month, sunrise.day, sunrise.hour, sunrise.minutes, sunrise.seconds));
-console.log(sunrise.ISOString);
 ```
 
 ## Contribute
