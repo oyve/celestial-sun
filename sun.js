@@ -68,8 +68,7 @@ function toDate(year, month, day, time, tz) {
         hours: hours,
         minutes: minutes,
         seconds: seconds,
-        tz: tz,
-        LocalISOString: new Date(year, month, day, hours, minutes, seconds).toISOString()
+        tz: tz
     }
 }
 

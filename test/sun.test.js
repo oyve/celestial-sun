@@ -23,8 +23,7 @@ describe("Sun - Integration Tests", function () {
                 hours: 6,
                 minutes: 4,
                 seconds: 56,
-                tz: tz,
-                LocalISOString: '2020-12-05T10:04:56.000Z'
+                tz: tz
             };
             //act
             const actual = sun.calculate(lat, lng, year, month, day, tz).sunrise;
@@ -43,8 +42,7 @@ describe("Sun - Integration Tests", function () {
                 hours: 17,
                 minutes: 34,
                 seconds: 53,
-                tz: tz,
-                LocalISOString: '2020-12-05T21:34:53.000Z'
+                tz: tz
             };
             //act
             const actual = sun.calculate(lat, lng, year, month, day, -4).sunset;
@@ -63,23 +61,13 @@ describe("Sun - Integration Tests", function () {
                 hours: 11,
                 minutes: 49,
                 seconds: 54,
-                tz: tz,
-                LocalISOString: '2020-12-05T15:49:54.000Z'
+                tz: tz
             };
             
             //act
             const actual = sun.calculate(lat, lng, year, month, day, -4).solarnoon;
             //assert
             assert.deepStrictEqual(actual, expected);
-        });
-
-        it("ISO string should equal", function () {
-            //arrange
-            const expected = new Date(year, month, day, 11, 49, 54).toISOString();
-            //act
-            const actual = sun.calculate(lat, lng, year, month, day, -4).solarnoon.LocalISOString;
-            //assert
-            assert.strictEqual(actual, expected);
         });
     });
 });
