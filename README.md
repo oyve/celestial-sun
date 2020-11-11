@@ -4,7 +4,7 @@ A Javascript library to calculate sun events.
 
 - Avoid JS Date *gymnastics*.
 - Date and time I/O are treated numbers-only.
-- Use your favorite JS-Date library on the side.
+- Use your favorite Date library on the side.
 
 ## Currently supported:
 
