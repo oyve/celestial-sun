@@ -2,7 +2,9 @@
 # celestial-sun
 A Javascript library to calculate sun events.
 
-To avoid JS Date gymnastics, date and time I/O are treated numbers-only.
+- Avoid JS Date *gymnastics*.
+- Date and time I/O are treated numbers-only.
+- Use your favorite JS-Date library on the side.
 
 ## Currently supported:
 
@@ -25,11 +27,11 @@ let sunrise = sunEvents.sunrise;
 let sunset = sunEvents.sunset;
 let solarnoon = sunEvents.solarnoon;
 
-//example use with local Date
+//example use with local JS Date
 
 console.log(new Date(sunrise.year, sunrise.month, sunrise.day, sunrise.hour, sunrise.minutes, sunrise.seconds));
 
-//Using JavaScript Date object, date appear 'correct' only for systems in the specified latitude/longtitude.
+//Note: Using JS Date object, date appear correct only for systems in the given latitude/longtitude.
 ```
 
 ## Contribute
