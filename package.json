@@ -1,6 +1,6 @@
 {
   "name": "celestial-sun",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Sun events such as sunrise and sunset",
   "main": "sun.js",
   "directories": {
@@ -16,7 +16,12 @@
   "keywords": [
     "sun",
     "sunrise",
-    "sunset"
+    "sunset",
+    "solar noon",
+    "astronomy",
+    "astrology",
+    "math",
+    "calculation"
   ],
   "author": "github.com/oyve",
   "license": "MIT",
